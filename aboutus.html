@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About Us</title>
+
+    <style>
+         :root {
+            --primary: rgb(0, 102, 102);
+            --light: #EEEEEE;
+            --dark: #212121;
+        }
+        
+        * {
+            margin: auto;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fira sans', sans-serif;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            background-image: url('./Assets/images/contactusbg.jpg');
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background-color: var(--dark);
+            padding: 8px 45px 8px 0;
+            border-bottom: 10px solid var(--primary);
+        }
+        
+        .logo {
+            margin: auto;
+            width: 20%;
+        }
+        
+        .menu,
+        .c_container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        h1 {
+            color: #FFF;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            /* margin: 0 0 0 50px; */
+        }
+        /* --------------burger------------ */
+        
+        .hamburger {
+            display: block;
+            position: relative;
+            z-index: 1;
+            user-select: none;
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background-color: var(--light);
+            border-radius: 6px;
+            z-index: 1;
+            transform-origin: 0 0;
+            transition: 0.4s;
+        }
+        
+        .hamburger:hover span:nth-child(2) {
+            transform: translateX(10px);
+            background-color: var(--primary);
+        }
+        
+        .hamburger.is-active span:nth-child(1) {
+            transform: translate(0px, -2px) rotate(45deg);
+        }
+        
+        .hamburger.is-active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(15px);
+        }
+        
+        .hamburger.is-active span:nth-child(3) {
+            transform: translate(-3px, 3px) rotate(-45deg);
+        }
+        
+        .hamburger.is-active:hover span {
+            background-color: var(--primary);
+        }
+        
+        .menu {
+            display: none;
+            flex: 1 1 0%;
+            justify-content: space-between;
+            margin: 0 4px;
+            white-space: nowrap;
+        }
+        
+        .menu a {
+            color: #FFF;
+            margin: 0 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.4s;
+            padding: 8px 16px;
+            border-radius: 99px;
+        }
+        
+        .menu a:nth-child(1) {
+            margin: 0 50px 0 100px;
+        }
+        
+        .menu a.is-active,
+        .menu a:hover {
+            background-color: var(--primary);
+        }
+        
+        .icons {
+            white-space: nowrap;
+            margin: 0 0 0 0;
+        }
+        
+        .icons a {
+            margin: 0 25px;
+        }
+        
+        .icons a:nth-child(1) img {
+            margin: 0 -20px 0 70px;
+            width: 27.5px;
+            max-width: 100%;
+            filter: invert(1);
+        }
+        
+        .icons a:nth-child(2) img {
+            width: 27.5px;
+            max-width: 100%;
+            filter: invert(1);
+            opacity: 0.9;
+        }
+        
+        .icons a:nth-child(3) img {
+            width: 27.5px;
+            max-width: 100%;
+            margin: 0 40px 0 -20px;
+            filter: invert(1);
+        }
+        
+        @media (min-width: 768px) {
+            .hamburger {
+                display: none;
+            }
+            .menu {
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width:1350px) {
+            .menu {
+                width: 60%;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            .menu {
+                position: absolute;
+                right: 0px;
+                height: 92vh;
+                top: 8vh;
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+                z-index: 2;
+            }
+            .menu a {
+                opacity: 0;
+            }
+        }
+        
+        .menu-active {
+            transform: translateX(0%);
+        }
+        
+        @keyframes navlinkfade {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+        
+        #img1 {
+            filter: brightness(120%);
+            height: 250px;
+        }
+        
+        #img2 {
+            height: 250px;
+        }
+        
+        html {
+            box-sizing: border-box;
+        }
+        
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: rgb(0, 102, 102);
+            color: white;
+            margin-top: 30px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            height: 310px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="c_container">
+            <h1 class="kupon">
+                <img class=" logo" src="./Assets/images/logo-removebg-preview.png"> KUPON</h1>
+            <div class="menu">
+                <a href="./index.html" class="is-active">Home</a>
+                <a href="./aboutus.html">About Us</a>
+                <a href="#">Coupons</a>
+                <a href="./contectusindex.html">Contact Us</a>
+            </div>
+            <div class="icons">
+                <a href="#"><img src="./Assets/images/search.jpg"></a>
+                <a href="./loginindex.html"><img src="./Assets/images/account.png"></a>
+
+            </div>
+            <button class="hamburger">
+                <span></span> 
+                <span></span>
+                <span></span> 
+            </button>
+        </div>
+
+
+    </nav>
+
+
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>KUPON is designed to save you from your troubles and provide you with promo codes so that you might make some savings. The codes are shared by other users so you can be sure that they work. Sharing codes also gives you points, which can be redeemed
+            in exchange of coupons later on. As you must have understood by now, Kupon is a two-way street. When one user uses the promo code of X company uploaded by the other user, Kupon takes some commission from the company from which a small percentage
+            goes to the user who uploaded the promo code in the first place while the rest goes to Kupon’s revenue. This works as an incentive for users to share their unused promo codes with Kupon and benefits the company by increasing their sales. This
+            is how Kupon generates it’s revenue and profits.
+
+        </p>
+    </div>
+    <!--
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img id='img1' src="https://media.istockphoto.com/photos/blue-phone-icon-or-contact-website-mobile-symbol-isolated-on-classic-picture-id1327617572?b=1&k=20&m=1327617572&s=170667a&w=0&h=F_k-dNQK9LcK1gbWE9AecrKi1xXRNzy1ZwRyxRnyX1g=" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2>CONTACT US</h2>
+                    <div><span><a><i class="fa fa-phone" style="font-size:30px; padding-right:20px;"></i><span style="padding-left:20px;">9876543210</a></span></span>
+                    </div><br>
+                    <div><span><a><i class="fa fa-envelope" style="font-size:30px; padding-right:20px;"></i><span style="padding-left:10px;">mail@mail.com</a></span></span>
+                    </div><br>
+
+
+                </div>
+            </div>
+        </div>
+    -->
+
+
+
+
+
+</body>
+
+</html>
