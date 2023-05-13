@@ -85,4 +85,9 @@ The DevOps project involves deploying a static web application on a container us
 <h4>17.	docker run -d -p 8000:80 -v ~/nginx-html:/usr/share/nginx/html --name devops nginx EC2</h4>
 
 Instance Type: The EC2 instance type should be selected based on the expected traffic and workload of the web application. The instance type should have enough CPU, memory, and disk space to handle the anticipated workload.
+  
+ <h1>Hosted Web application landing page</h1>
+  
+![Screenshot (376)](https://github.com/theritik01/Devops_project/assets/99108259/ac7bff47-779b-4617-8728-479900f13285)
 
+ 
