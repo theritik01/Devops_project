@@ -1,4 +1,4 @@
-#Static web application deployment on container using Terraform and AWS EC2
+<h1>Static web application deployment on container using Terraform and AWS EC2<\h1>
 
 The DevOps project involves deploying a static web application on a container using Terraform and AWS EC2. Terraform is used to provision and manage the AWS infrastructure, while AWS EC2 instances are used to host the containerized web application. The web application is built using static files, which are served by a web server running inside the container. By using containers, the application can be easily deployed and scaled across multiple instances. The use of Terraform enables the infrastructure to be defined as code, making it easier to manage and reproduce the environment. Overall, this project demonstrates how DevOps practices can be used to efficiently deploy and manage a static web application on AWS infrastructure.
 
