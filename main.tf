@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIA5PMFZYSC5WCZIP6N"
-  secret_key = "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"
+  access_key = "***********"
+  secret_key = "***************************"
 }
 
 variable "name" {
@@ -9,9 +9,9 @@ variable "name" {
 }
 
 resource "aws_instance" "devops_01_docker-nginx" {
-    ami = "ami-0889a44b331db0194"
+    ami = "**********"
     instance_type = "t2.micro"
-    key_name = "devops_02"
+    key_name = "devops_01"
 
     tags = {
         Name = "${var.name}"
